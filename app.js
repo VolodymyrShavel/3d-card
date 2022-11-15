@@ -10,7 +10,7 @@ const sizes = document.querySelector('.sizes');
 const sizeBtns = document.querySelectorAll('.sizes button');
 
 window.addEventListener('devicemotion', (event) => {
-   console.log(`${event.acceleration.x} m/s2`);
+   card.createElement('p').innerHTML = `${event.acceleration.x} m/s2`;
 });
 
 //Moving Animation Event
