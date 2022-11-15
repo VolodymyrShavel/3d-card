@@ -33,6 +33,16 @@ body {
    box-shadow: 0 20px 20px RGBA(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
+[data-moving='left'] .card {
+   border-width: 0 1px 0 0;
+   transform-origin: bottom right;
+   right: 50%;
+   left: auto;
+}
+[data-moving='right'] .card {
+   transform-origin: bottom left;
+}
+
 .sneaker {
    min-height: 35vh;
    display: flex;
