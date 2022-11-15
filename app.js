@@ -9,6 +9,14 @@ const description = document.querySelector('.info h3');
 const sizes = document.querySelector('.sizes');
 const sizeBtns = document.querySelectorAll('.sizes button');
 
+if (window.DeviceMotionEvent == undefined) {
+   //No accelerometer is present. Use buttons.
+   alert('no accelerometer');
+} else {
+   alert('accelerometer found');
+   window.addEventListener('devicemotion', accelerometerUpdate, true);
+}
+
 window.addEventListener('devicemotion', (event) => {
    card.createElement('p').innerHTML = `${event.acceleration.x} m/s2`;
 });
